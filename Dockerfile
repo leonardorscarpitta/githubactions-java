@@ -2,10 +2,7 @@ FROM amazoncorretto:17-alpine AS build
 
 WORKDIR /app
 
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
-COPY src src
+COPY mvnw .mvn pom.xml src ./
 
 RUN ./mvnw clean package -DskipTests
 

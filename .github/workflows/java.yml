@@ -27,4 +27,4 @@ jobs:
         run: docker build -t leonardorscarpitta/vitaflow:latest .
 
       - name: Run Docker Compose
-        run: docker-compose up -d
+        run: docker compose up -d
